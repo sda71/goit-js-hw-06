@@ -6,10 +6,16 @@ function onInputBlur(event) {
     const inputLength = event.target.value.length;
     const dataLength = event.target.getAttribute('data-length');
     
-    if (inputLength === Number(dataLength)) {
-      event.target.classList.remove('invalid');
-      event.target.classList.add('valid');   
-    } else {
-          event.target.classList.add('invalid');
-    }  
-  }
+
+    if(inputLength === 0){
+      event.target.classList.remove('valid','invalid')
+    }
+    else  if (inputLength === Number(dataLength)) {
+    event.target.classList.remove('invalid');
+    event.target.classList.add('valid');   
+  } else {
+        event.target.classList.add('invalid');
+  }  
+}
+
+
