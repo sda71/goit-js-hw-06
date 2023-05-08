@@ -8,7 +8,7 @@ function onInputBlur(event) {
     
 
     if(inputLength === 0){
-      event.target.classList.remove('valid','invalid')
+      event.target.classList.remove('valid','invalid');
     }
     else  if (inputLength === Number(dataLength)) {
     event.target.classList.remove('invalid');
