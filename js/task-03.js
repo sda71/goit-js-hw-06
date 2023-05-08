@@ -16,7 +16,6 @@ const images = [
 const galleryList = document.querySelector('.gallery');
 
 
-
 const imagesList = images.map(image => `<li><img src="${image.url} alt="${image.alt}" width="100%/3" ></img></li>`);
 
 galleryList.insertAdjacentHTML("afterbegin", imagesList);
@@ -25,3 +24,9 @@ galleryList.style.display = 'flex';
 galleryList.style.flexWrap = 'wrap';
 galleryList.style.gap = '30px';
 galleryList.style.justifyContent = 'space-around';
+
+
+const items = galleryList.querySelectorAll('.item');
+items.forEach(item => {
+  item.style.listStyle = 'none';
+});
